@@ -1,0 +1,204 @@
+
+### **Étape 1 : Créer un compte GitHub**
+1. Va sur [https://github.com](https://github.com) et clique sur **Sign up** (S'inscrire).
+2. Suis les étapes pour créer ton compte, en choisissant un nom d'utilisateur, une adresse email et un mot de passe.
+3. Une fois l'inscription terminée, tu recevras un email pour confirmer ton adresse.
+
+---
+
+### **Étape 2 : Créer un nouveau repository sur GitHub**
+1. Connecte-toi à ton compte GitHub.
+2. Sur la page d'accueil, clique sur le bouton **+** en haut à droite, puis sélectionne **New repository**.
+3. Donne un nom à ton repository (par exemple : `portfolio`).
+4. Assure-toi que le repository soit **public** (pour que tout le monde puisse y accéder).
+5. Clique sur **Create repository**.
+
+---
+
+### **Étape 3 : Installer Git sur ton ordinateur**
+Si tu n'as pas encore installé Git sur ton ordinateur, voici comment faire :
+1. Télécharge Git depuis [https://git-scm.com](https://git-scm.com).
+2. Installe Git en suivant les instructions sur le site. Lors de l'installation, laisse les options par défaut, sauf si tu as des préférences spécifiques.
+
+---
+
+### **Étape 4 : Configurer Git sur ton ordinateur**
+1. Ouvre ton terminal (ou Git Bash sous Windows) et configure ton nom d'utilisateur et ton email :
+   ```bash
+   git config --global user.name "Ton Nom"
+   git config --global user.email "ton.email@example.com"
+   ```
+
+---
+
+### **Étape 5 : Créer un dossier pour ton projet**
+1. Crée un dossier sur ton ordinateur pour ton projet de portfolio :
+   ```bash
+   mkdir portfolio
+   cd portfolio
+   ```
+
+---
+
+### **Étape 6 : Initialiser un dépôt Git local**
+1. Dans le terminal, initialise un dépôt Git dans ce dossier :
+   ```bash
+   git init
+   ```
+
+---
+
+### **Étape 7 : Lier ton dépôt local à GitHub**
+1. Sur la page de ton repository GitHub (celui que tu as créé dans l'Étape 2), copie l'URL de ton repository (en haut à droite, dans la section **Code**, tu peux choisir HTTPS ou SSH).
+2. Lier ton dépôt local à ce repository GitHub avec cette commande :
+   ```bash
+   git remote add origin https://github.com/ton-username/portfolio.git
+   ```
+   Remplace `ton-username` par ton nom d'utilisateur GitHub.
+
+---
+
+### **Étape 8 : Créer un fichier `README.md`**
+1. Crée un fichier `README.md` dans le dossier du projet :
+   ```bash
+   touch README.md
+   ```
+2. Ouvre ce fichier avec ton éditeur de texte et ajoute le code suivant :
+   ```markdown
+   # Portfolio
+
+   Ce projet contient le code source du portfolio de [TON NOM]
+   ```
+   Remplace **[TON NOM]** par ton propre nom.
+
+---
+
+### **Étape 9 : Ajouter et commettre tes changements**
+1. Ajoute le fichier `README.md` à la **staging area** :
+   ```bash
+   git add README.md
+   ```
+2. Fais un **commit** pour enregistrer ce fichier dans ton historique Git local :
+   ```bash
+   git commit -m "Premier commit - Ajout du fichier README.md"
+   ```
+
+---
+
+### **Étape 10 : Pousser ton projet sur GitHub (Premier push)**
+1. Pousse ton projet sur GitHub :
+   ```bash
+   git push -u origin master
+   ```
+   Si tu utilises la branche `main` (c'est souvent le cas par défaut maintenant), remplace `master` par `main` :
+   ```bash
+   git push -u origin main
+   ```
+
+---
+
+### **Étape 11 : Créer une branche "documentation"**
+1. Crée une nouvelle branche nommée **documentation** :
+   ```bash
+   git checkout -b documentation
+   ```
+
+---
+
+### **Étape 12 : Ajouter du contenu au fichier `README.md`**
+1. Modifie le fichier `README.md` pour y ajouter les informations sur le portfolio. Par exemple :
+   ```markdown
+   # Portfolio
+
+   Ce projet contient le code source du portfolio de [INSERER LE NOM DU BINOME]
+   ```
+   Remplace **[INSERER LE NOM DU BINOME]** par le nom de ton binôme.
+
+---
+
+### **Étape 13 : Ajouter et commettre le fichier `README.md`**
+1. Ajoute le fichier à la staging area :
+   ```bash
+   git add README.md
+   ```
+2. Fais un commit pour enregistrer le changement :
+   ```bash
+   git commit -m "Ajout des informations sur le portfolio de mon binôme"
+   ```
+
+---
+
+### **Étape 14 : Pousser la branche "documentation" sur GitHub**
+1. Envoie ta branche **documentation** sur GitHub :
+   ```bash
+   git push -u origin documentation
+   ```
+
+---
+
+### **Étape 15 : Vérifier que la branche est bien sur GitHub**
+1. Va sur la page de ton repository GitHub et clique sur la liste déroulante des branches (en haut à gauche, sur la page du repository).
+2. Vérifie que la branche **documentation** est bien visible et sélectionnée.
+
+---
+
+### **Étape 16 : Créer une Pull Request**
+1. Sur GitHub, va dans l'onglet **Pull Requests** et clique sur **New Pull Request**.
+2. Sélectionne **documentation** comme branche source et **main** (ou **master**) comme branche de destination.
+3. Clique sur **Create Pull Request**.
+
+---
+
+### **Étape 17 : Fusionner la Pull Request**
+1. Demande à ton binôme de fusionner la Pull Request.
+2. Une fois la Pull Request fusionnée, le fichier `README.md` sera intégré à la branche **main** du repository.
+
+---
+
+### **Étape 18 : Ne pas supprimer la branche "documentation"**
+1. Ne supprime pas la branche **documentation** après la fusion. Elle doit rester visible dans l’historique du repository.
+
+---
+
+## **Résumé des commandes principales à copier-coller :**
+
+1. **Cloner le repository** :
+   ```bash
+   git clone https://github.com/ton-username/portfolio.git
+   ```
+
+2. **Initialiser le dépôt** :
+   ```bash
+   git init
+   ```
+
+3. **Lier le dépôt local à GitHub** :
+   ```bash
+   git remote add origin https://github.com/ton-username/portfolio.git
+   ```
+
+4. **Créer une branche "documentation"** :
+   ```bash
+   git checkout -b documentation
+   ```
+
+5. **Ajouter le fichier `README.md`** :
+   ```bash
+   touch README.md
+   ```
+
+6. **Ajouter et commettre les changements** :
+   ```bash
+   git add README.md
+   git commit -m "Premier commit - Ajout du fichier README.md"
+   ```
+
+7. **Pousser le projet sur GitHub** :
+   ```bash
+   git push -u origin master   # Ou `main` si c'est la branche par défaut
+   ```
+
+8. **Pousser la branche "documentation"** :
+   ```bash
+   git push -u origin documentation
+   ```
